@@ -33,4 +33,10 @@ class User < ApplicationRecord
     def generate_unique_session_token
         self.session_token = SecureRandom.urlsafe_base64
     end
+
+    def ensure_session_token
+        self.session_token ||= SecureRandom.urlsafe_base64
+    end
+
+    
 end
