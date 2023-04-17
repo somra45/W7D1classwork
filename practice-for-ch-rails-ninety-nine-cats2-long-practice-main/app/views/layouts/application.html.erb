@@ -12,7 +12,8 @@
   </head>
 
   <body>
-    <nav class="main-nav">
+    <nav class="main-nav" display="flex" justify-content="right">
+      <p> <%= current_user.username %> </p>
       <h1><a href="<%= cats_url %>">99 Cats</a></h1>
     </nav>
     <main>
